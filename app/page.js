@@ -8,6 +8,7 @@ export default function Home(){
                 <hi>CPRG 306: Web Development 2 - Assignments</hi>
                 <StudentInfo/>
                 <div><link href='week2'>week2</link></div>
+                <div><link href='week3'>week3</link></div>
             </div>
         </main>
     )
