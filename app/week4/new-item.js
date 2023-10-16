@@ -60,6 +60,15 @@ const NewItem = () => {
             <option value="produce">Produce</option>
             <option value="dairy">Dairy</option>
             <option value="bakery">Bakery</option>
+            <option value="meat">Meat</option>
+            <option value="frozenFood">Frozen Foods</option>
+            <option value="cannedGoods">Canned Goods</option>
+            <option value="dryGoods">Dry Goods</option>
+            <option value="beverages">Beverages</option>
+            <option value="snacks">Snacks</option>
+            <option value="household">Household</option>
+            <option value="ohter">Other</option>
+              
           </select>
         </div>
 
