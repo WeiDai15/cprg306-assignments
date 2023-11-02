@@ -7,13 +7,10 @@ const NewItem = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const item = { name, quantity, category };
-    console.log(item);
-    alert(`Name: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
-    setName(''); 
-    setQuantity(1); 
-    setCategory('produce'); 
-  };
+    const item = { name: name, quantity: quantity, category: category };
+
+    onAddItem(item);
+  };    
 
   return (
     <div className="max-w-screen-sm mx-auto p-4">
