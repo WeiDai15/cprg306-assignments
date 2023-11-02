@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 
-const NewItem = () => {
+function NewItem = ({ onAddItem}) {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState('produce');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const item = { name: name, quantity: quantity, category: category };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newItem = { name, quantity, category };
 
-    onAddItem(item);
-  };    
+    onAddItem(newItem);
+    setName('');
+    setQuantity('1');
+    setCategory('produce');
+  };
 
   return (
     <div className="max-w-screen-sm mx-auto p-4">
       <h1 className="text-3xl font-semibold mb-4">Add New Item</h1>
       <form onSubmit={handleSubmit}>
-        {/* Name Field */}
+        
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
           <input
@@ -29,7 +32,7 @@ const NewItem = () => {
           />
         </div>
 
-        {/* Quantity Field */}
+        
         <div className="mb-4">
           <label htmlFor="quantity" className="block text-sm font-medium text-gray-700">Quantity</label>
           <input
@@ -44,7 +47,7 @@ const NewItem = () => {
           />
         </div>
 
-        {/* Category Field */}
+        
         <div className="mb-4">
           <label htmlFor="category" className="block text-sm font-medium text-gray-700">Category</label>
           <select
@@ -67,7 +70,7 @@ const NewItem = () => {
           </select>
         </div>
 
-        {/* Submit Button */}
+        
         <div className="mb-4">
           <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
             Add Item
