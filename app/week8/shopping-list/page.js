@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import NewItem from './new-item'; 
 import ItemList from './item-list'; 
-import itemsData from './items.json'; 
+import { getItems, addItem } from "./_services/shopping-list-service";
+import { useEffect } from "react";
 
 const Page = () => {
   const [items, setItems] = useState(itemsData);
